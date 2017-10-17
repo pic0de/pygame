@@ -20,7 +20,7 @@ clock = pygame.time.Clock()
 Mort = False
 arImg = pygame.image.load('macgyver.png')
 
-def car(x,y):
+def mac(x,y):
     gameDisplay.blit(arImg, (x,y))
 
 x =  (display_width * 0.45)
@@ -32,7 +32,7 @@ while not Mort:
             Mort = True
 
     gameDisplay.fill(black)
-    car(x,y)
+    mac(x,y)
 
         
     pygame.display.update()
