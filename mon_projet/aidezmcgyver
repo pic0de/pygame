@@ -1,0 +1,48 @@
+#! user/bin/evn python 3
+# coding : utf-8
+
+import os
+import pygame
+
+
+pygame.init()
+
+display_width = 800
+display_height = 600
+#couleur du plateau
+black = (0,0,0)
+white = (255,255,255)
+# ouvrire la fennetre de jeu 
+affichage_jeu = pygame.display.set_mode((display_width, display_height))
+#Titre
+pygame.display.set_caption('Aidez MCgyver')
+
+#charger l'image de mcgyver
+Hero_img = pygame.image.load('image/macgyver.png')
+
+def Mcgyver(x,y):
+	affichage_jeu.blit(Hero_img, (x,y))
+
+x = (display_width * 0.45)
+y = (display_height * 0.8)
+
+clock = pygame.time.Clock()
+while 1:
+    # Limité la vitesse a 30
+    clock.tick(30)
+
+    pygame.event.pump()
+
+    # A key has been pressed
+    keyinput = pygame.key.get_pressed()
+
+    # Exit on window corner x click
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            pygame.quit()
+            raise SystemExit
+
+   
+
+# mise a jour d'affichage
+pygame.display.flip()
