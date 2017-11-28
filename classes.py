@@ -14,7 +14,7 @@ keyboard_input = {pygame.K_DOWN: 'mcgyver.move_y(40)',
 class AgentScreen:
     #this list of tools needed  in our game (png pictures in pic foder)
     Tool = ['mcgyver', 'mur', 'flor', 'guardian', 'pwr', 'tresor',
-            'dim', 'depart', 'xp', 'gameover']
+            'dim', 'depart', 'xp']
 
     def __init__(self):
         #inisialize pyagme
